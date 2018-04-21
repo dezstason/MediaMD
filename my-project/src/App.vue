@@ -4,6 +4,9 @@
     <!-- NAVBAR OF THE SITE -->
 
     <div class="navbar">
+      <md-menu class="topItem" style="float: left;">
+        <p id="logo"> <i class="material-icons">&#xE8CB;</i>ONLINE SHOP</p>
+      </md-menu>
       <md-menu class="topItem">
         <md-button md-menu-trigger>My Account</md-button>
 
@@ -19,15 +22,16 @@
         <md-menu-content class="item" >
           <md-menu-item>Your Cart</md-menu-item>
           <md-menu-item><hr style="width: 100%"></md-menu-item>
-          <md-menu-item v-for="order in orders">{{ order.title }}        {{ order.price}}$</md-menu-item>
+          <md-menu-item v-for="order in orders">{{ order.title }}  &#160 &#160 &#160 &#160 &#160{{ order.price}}$</md-menu-item>
         </md-menu-content>
       </md-menu>
     </div>
 
     <!-- TABS WITH CARDS AND OTHER INFORMATION -->
 
-    <md-tabs md-sync-route>
-      <md-tab id="tab-home" md-label="Home" to="/components/tabs/home" class="tabs">
+    <md-tabs md-sync-route class="tabs">
+      <md-tab id="tab-home" md-label="Home" to="/components/tabs/home">
+
         <md-card class="card" md-with-hover v-for="card in cards">
           <md-card-media>
             <img v-bind:src="card.urlImg">
@@ -43,6 +47,7 @@
             <md-button class="md-accent" @click="second = true">View More</md-button>
           </md-card-actions>
         </md-card>
+
       </md-tab>
 
       <md-tab id="tab-pages" md-label="Pages" to="/components/tabs/pages">
@@ -168,10 +173,17 @@ export default {
   margin: 0 auto;
 
 }
+#logo{
+  position: relative;
+  top: -20px;
+  font-size: 20px;
+}
 body{
   padding-bottom: 10px;
-  /*background-color: #f7f8f9;*/
-  background: url("https://5dwallpaper.com/wp-content/uploads/2016/09/white-brick-wallpaper7.jpg") no-repeat fixed;
+
+  /*background: url("https://5dwallpaper.com/wp-content/uploads/2016/09/white-brick-wallpaper7.jpg") no-repeat fixed;*/
+  background: linear-gradient( rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.01) ), url("https://png.pngtree.com/element_origin_min_pic/16/06/17/195763de232dcd8.jpg") no-repeat fixed top rgba(0, 0, 0, 0.5);
+  background-size: 100%;
 }
 .card{
     width: 300px;
@@ -179,6 +191,14 @@ body{
     margin-left: 15px;
     margin-top: 20px;
     background-color: white;
+  transition: all 200ms;
+  transform: scale(1);
+
+}
+
+.card:hover{
+  transition: transform 0.2s ease-in-out;
+  transform: scale(1.05);
 }
 
 .card img {
@@ -217,8 +237,24 @@ body{
     bottom: 24px;
     right: 36px;
   }
+
+  .tabs .md-tabs-navigation{
+    padding-left: 400px;
+    align-content: center;
+    margin-top: 20px;
+    background-color: white;
+    box-shadow: 0 3px 1px -2px rgba(0,0,0,.2),0 2px 2px 0 rgba(0,0,0,.14),0 1px 5px 0 rgba(0,0,0,.12);
+
+  }
+
+  .tabs .md-tabs-navigation .md-button{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 15px;
+  }
+
   .md-button{
-    margin-left: 0px;
+    font-size: 17px;
+    margin-left: 0;
   }
 
 
@@ -229,8 +265,8 @@ body{
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: -10px;
-  right: -25px;
+  top: -8px;
+  right: -20px;
   background: red;
   border-radius: 100%;
   color: white;
@@ -239,5 +275,6 @@ body{
   font-weight: 600;
   letter-spacing: -.05em;
   font-family: 'Roboto Mono', monospace;
+  z-index: 1000;
 }
 </style>
