@@ -23,139 +23,26 @@
       </md-menu>
     </div>
 
-    <md-card class="card" md-with-hover>
+
+    <md-card class="card" md-with-hover v-for="card in cards">
       <md-card-media>
-        <img src="logo.jpg" >
+        <img v-bind:src="card.urlImg">
       </md-card-media>
 
       <md-card-header>
-        <div class="md-title">Title goes here</div>
+        <div class="md-title">{{ card.title }}</div>
         <div class="md-subhead">Subtitle here</div>
       </md-card-header>
 
       <md-card-actions>
-        <md-button>Buy</md-button>
+        <md-button class="md-accent" @click="first = true">Buy </md-button>
         <md-button>View More</md-button>
       </md-card-actions>
     </md-card>
 
-    <md-card class="card" md-with-hover>
-      <md-card-media>
-        <img src="logo.jpg" >
-      </md-card-media>
 
-      <md-card-header>
-        <div class="md-title">Title goes here</div>
-        <div class="md-subhead">Subtitle here</div>
-      </md-card-header>
 
-      <md-card-actions>
-        <md-button>Buy</md-button>
-        <md-button>View More</md-button>
-      </md-card-actions>
-    </md-card>
 
-    <md-card class="card" md-with-hover>
-      <md-card-media>
-        <img src="logo.jpg" >
-      </md-card-media>
-
-      <md-card-header>
-        <div class="md-title">Title goes here</div>
-        <div class="md-subhead">Subtitle here</div>
-      </md-card-header>
-
-      <md-card-actions>
-        <md-button>Buy</md-button>
-        <md-button>View More</md-button>
-      </md-card-actions>
-    </md-card>
-
-    <md-card class="card" md-with-hover>
-      <md-card-media>
-        <img src="logo.jpg" >
-      </md-card-media>
-
-      <md-card-header>
-        <div class="md-title">Title goes here</div>
-        <div class="md-subhead">Subtitle here</div>
-      </md-card-header>
-
-      <md-card-actions>
-        <md-button>Buy</md-button>
-        <md-button>View More</md-button>
-      </md-card-actions>
-    </md-card>
-
-    <md-card class="card" md-with-hover>
-      <md-card-media>
-        <img src="logo.jpg" >
-      </md-card-media>
-
-      <md-card-header>
-        <div class="md-title">Title goes here</div>
-        <div class="md-subhead">Subtitle here</div>
-      </md-card-header>
-
-      <md-card-actions>
-        <md-button>Buy</md-button>
-        <md-button>View More</md-button>
-      </md-card-actions>
-    </md-card>
-
-    <md-card class="card" md-with-hover>
-      <md-card-media>
-        <img src="logo.jpg" >
-      </md-card-media>
-
-      <md-card-header>
-        <div class="md-title">Title goes here</div>
-        <div class="md-subhead">Subtitle here</div>
-      </md-card-header>
-
-      <md-card-actions>
-        <md-button>Buy</md-button>
-        <md-button>View More</md-button>
-      </md-card-actions>
-    </md-card>
-
-    <md-card class="card">
-      <md-card-media>
-        <img src="logo.jpg" alt="People">
-      </md-card-media>
-
-      <md-card-header >
-        <div class="md-title" v-for="card in cards">{{card.title}}</div>
-        <div class="md-subhead">Subtitle here</div>
-      </md-card-header>
-
-      <md-card-actions>
-        <md-button v-on:click = "fillCard()">Action</md-button>
-        <md-button>Action</md-button>
-      </md-card-actions>
-    </md-card>
-
-    <md-card class="card">
-      <md-card-area>
-        <md-card-media>
-          <img src="/assets/examples/card-image-1.jpg" alt="People">
-        </md-card-media>
-
-        <md-card-header>
-          <div class="md-title">Actions left aligned</div>
-          <div class="md-subhead">Subtitle here</div>
-        </md-card-header>
-
-        <md-card-content>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio itaque ea, nostrum odio. Dolores, sed accusantium quasi non, voluptas eius illo quas, saepe voluptate pariatur in deleniti minus sint. Excepturi.
-        </md-card-content>
-      </md-card-area>
-
-      <md-card-actions md-alignment="left">
-        <md-button>Action</md-button>
-        <md-button>Action</md-button>
-      </md-card-actions>
-    </md-card>
 
     <div class="actionButtons">
       <md-button class="md-fab"  style="background-color: cornflowerblue; color: white;">
@@ -187,22 +74,55 @@
 <script>
 import HelloWorld from './components/HelloWorld'
 
+
 export default {
   name: 'App',
-  name: 'ProgressBarQuery',
   data: function(){
     return {
-      cards: []
-    }
-  },
-  methods: {
-    fillCard: function(){
-      this.cards.push({title: 'Stanislav title'})
+      cards: [
+        {
+          'title': 'iPhone 6',
+          'urlImg': 'https://assets.pcmag.com/media/images/441875-iphone-6-inline-2.jpg?thumb=y&width=980&height=552'
+        },
+        {
+          'title': 'iPhone 5',
+          'urlImg': 'https://p1.akcdn.net/full/217009883.apple-iphone-5s-16gb.jpg'
+        },
+        {
+          'title': 'Samsung S9',
+          'urlImg': 'https://p1.akcdn.net/full/217009883.apple-iphone-5s-16gb.jpg'
+        },
+        {
+          'title': 'Xiaomi Redmi 5',
+          'urlImg': 'https://p1.akcdn.net/full/217009883.apple-iphone-5s-16gb.jpg'
+        },
+        {
+          'title': 'iPhone 6',
+          'urlImg': 'https://p1.akcdn.net/full/217009883.apple-iphone-5s-16gb.jpg'
+        },
+        {
+          'title': 'iPhone 5',
+          'urlImg': 'https://p1.akcdn.net/full/217009883.apple-iphone-5s-16gb.jpg'
+        },
+        {
+          'title': 'Samsung S9',
+          'urlImg': 'https://p1.akcdn.net/full/217009883.apple-iphone-5s-16gb.jpg'
+        }
+      ],
+      first: false
     }
   }
+
 }
 
+
+
+
 </script>
+
+
+
+
 
 <style>
 #app {
@@ -223,6 +143,15 @@ export default {
     margin-top: 20px;
 }
 
+.card img {
+  height: 260px;
+}
+.dialogWindow{
+  background-color: white;
+  width: 450px;
+  height: 200px;
+  font-size: 25px;
+}
   .navbar{
     height: 80px;
     margin-top: 20px;
@@ -242,7 +171,7 @@ export default {
   .actionButtons{
     width: 40px;
     align-content: center;
-    position: absolute;
+    position: fixed;
     bottom: 24px;
     right: 36px;
   }
