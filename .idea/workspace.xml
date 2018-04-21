@@ -34,9 +34,10 @@
       <file leaf-file-name="App.vue" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/my-project/src/App.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="553">
-              <caret line="109" column="8" selection-start-line="109" selection-start-column="8" selection-end-line="109" selection-end-column="8" />
+            <state relative-caret-position="289">
+              <caret line="78" column="22" selection-start-line="78" selection-start-column="22" selection-end-line="78" selection-end-column="22" />
               <folding>
+                <element signature="n#style#0;n#hr#0;n#md-menu-item#1;n#md-menu-content#0;n#md-menu#1;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#md-button#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#md-button#1;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#md-button#2;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
@@ -116,7 +117,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../PizzaVue" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Pizza" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -150,12 +151,12 @@
       <updated>1523452862999</updated>
       <workItem from="1523452866823" duration="10328000" />
       <workItem from="1524064466620" duration="51000" />
-      <workItem from="1524292500344" duration="3403000" />
+      <workItem from="1524292500344" duration="10078000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13782000" />
+    <option name="totallyTimeSpent" value="20457000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -208,6 +209,7 @@
         <state relative-caret-position="3230">
           <caret line="190" column="14" selection-start-line="190" selection-start-column="14" selection-end-line="190" selection-end-column="14" />
           <folding>
+            <element signature="n#style#0;n#hr#0;n#md-menu-item#1;n#md-menu-content#0;n#md-menu#1;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#md-button#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#md-button#1;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#md-button#2;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
@@ -236,6 +238,7 @@
         <state relative-caret-position="3230">
           <caret line="190" column="14" selection-start-line="190" selection-start-column="14" selection-end-line="190" selection-end-column="14" />
           <folding>
+            <element signature="n#style#0;n#hr#0;n#md-menu-item#1;n#md-menu-content#0;n#md-menu#1;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#md-button#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#md-button#1;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#md-button#2;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
@@ -261,9 +264,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/my-project/src/App.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="553">
-          <caret line="109" column="8" selection-start-line="109" selection-start-column="8" selection-end-line="109" selection-end-column="8" />
+        <state relative-caret-position="289">
+          <caret line="78" column="22" selection-start-line="78" selection-start-column="22" selection-end-line="78" selection-end-column="22" />
           <folding>
+            <element signature="n#style#0;n#hr#0;n#md-menu-item#1;n#md-menu-content#0;n#md-menu#1;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#md-button#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#md-button#1;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#md-button#2;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
