@@ -22,7 +22,7 @@
         <md-menu-content class="item" >
           <md-menu-item>Your Cart</md-menu-item>
           <md-menu-item><hr style="width: 100%"></md-menu-item>
-          <md-menu-item v-for="order in orders">{{ order.title }}  &#160 &#160 &#160 &#160 &#160{{ order.price}}$</md-menu-item>
+          <md-menu-item v-for="order in orders">{{ order.title }}  &#160 &#160 &#160 &#160{{ order.price}}$</md-menu-item>
         </md-menu-content>
       </md-menu>
     </div>
@@ -57,7 +57,7 @@
 
       <md-tab id="tab-pages" md-label="Workers" to="/components/tabs/pages">
 
-        <md-list class="md-double-line md-dense" v-for="worker in workers">
+        <md-list class="md-double-line md-dense md-list-my" v-for="worker in workers">
           <md-subheader>Name</md-subheader>
 
           <md-list-item>
@@ -370,7 +370,7 @@ body{
   font-family: 'Roboto Mono', monospace;
   z-index: 1000;
 }
-.md-list {
+.md-list-my {
   width: 300px;
   margin-right: 10px;
   margin-left: 7px;
