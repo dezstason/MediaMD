@@ -29,7 +29,10 @@
 
     <!-- TABS WITH CARDS AND OTHER INFORMATION -->
 
-    <md-tabs md-sync-route class="tabs">
+    <md-tabs md-sync-route class="tabs" md-alignment="centered">
+
+      <!-- TAB WITH CARDS -->
+
       <md-tab id="tab-home" md-label="Home" to="/components/tabs/home">
 
         <md-card class="card" md-with-hover v-for="card in cards">
@@ -50,9 +53,73 @@
 
       </md-tab>
 
-      <md-tab id="tab-pages" md-label="Pages" to="/components/tabs/pages">
-        Pages tab
-        <p>Unde provident nemo reiciendis officia, possimus repellendus. Facere dignissimos dicta quis rem. Aliquam aspernatur dolor atque nisi id deserunt laudantium quam repellat.</p>
+      <!-- TAB WITH WORKERS -->
+
+      <md-tab id="tab-pages" md-label="Workers" to="/components/tabs/pages">
+
+        <md-list class="md-double-line md-dense" v-for="worker in workers">
+          <md-subheader>Name</md-subheader>
+
+          <md-list-item>
+            <md-avatar>
+              <img src="https://placeimg.com/40/40/people/5" alt="People">
+            </md-avatar>
+
+            <div class="md-list-item-text">
+              <span>{{ worker.name }}</span>
+              <span>Name</span>
+            </div>
+
+          </md-list-item>
+          <hr class="hrWorker">
+          <md-subheader>Phone</md-subheader>
+
+          <md-list-item>
+            <md-icon class="md-primary">phone</md-icon>
+
+            <div class="md-list-item-text">
+              <span>{{ worker.number1 }}</span>
+              <span>Mobile</span>
+            </div>
+
+            <md-button class="md-icon-button md-list-action">
+              <md-icon>sms</md-icon>
+            </md-button>
+          </md-list-item>
+
+          <md-list-item class="md-inset">
+            <div class="md-list-item-text">
+              <span>{{ worker.number2 }}</span>
+              <span>Mobile</span>
+            </div>
+
+            <md-button class="md-icon-button md-list-action">
+              <md-icon>sms</md-icon>
+            </md-button>
+          </md-list-item>
+
+          <md-divider></md-divider>
+          <hr class="hrWorker">
+
+          <md-subheader>Email</md-subheader>
+
+          <md-list-item>
+            <md-icon class="md-primary">email</md-icon>
+
+            <div class="md-list-item-text">
+              <span>{{ worker.email }}</span>
+              <span>Personal</span>
+            </div>
+          </md-list-item>
+
+          <md-list-item class="md-inset">
+            <div class="md-list-item-text">
+              <span>{{ worker.workEmail }}</span>
+              <span>Work</span>
+            </div>
+          </md-list-item>
+        </md-list>
+
       </md-tab>
 
     </md-tabs>
@@ -138,6 +205,29 @@ export default {
           'price' : 900
         }
       ],
+      workers: [
+        {
+          'name': 'John Stilinski',
+          'number1': '(650) 555-1234',
+          'number2': '(650) 555-1234',
+          'email': 'aliconnors@example.com',
+          'workEmail': 'ali_connors@example.com'
+        },
+        {
+          'name': 'Ann Rozmary',
+          'number1': '(650) 555-1353',
+          'number2': '(650) 555-1375',
+          'email': 'annrozmary@example.com',
+          'workEmail': 'ann_rozmary@example.com'
+        },
+        {
+          'name': 'Sofia Turner',
+          'number1': '(650) 555-6585',
+          'number2': '(650) 555-9082',
+          'email': 'softur@example.com',
+          'workEmail': 'sof_tur@example.com'
+        }
+      ],
       first: false,
       visib: false,
       newPosts: 0,
@@ -171,7 +261,10 @@ export default {
   padding: 20px;
   width: 1030px;
   margin: 0 auto;
-
+}
+.hrWorker{
+  width: 75%;
+  float: right;
 }
 #logo{
   position: relative;
@@ -239,7 +332,7 @@ body{
   }
 
   .tabs .md-tabs-navigation{
-    padding-left: 400px;
+
     align-content: center;
     margin-top: 20px;
     background-color: white;
@@ -277,4 +370,14 @@ body{
   font-family: 'Roboto Mono', monospace;
   z-index: 1000;
 }
+.md-list {
+  width: 300px;
+  margin-right: 10px;
+  margin-left: 7px;
+  max-width: 100%;
+  display: inline-block;
+  vertical-align: top;
+  border: 1px solid rgba(0, 0, 0, .12);
+}
+
 </style>
